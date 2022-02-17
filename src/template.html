@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <script
+      type="text/javascript"
+      src="https://cdn.adexplain.com/inc/public/lib/zepto/zepto.js"
+    ></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      .area {
+        width: 100px;
+        height: 200px;
+      }
+      .area:nth-child(2n) {
+        background-color: red;
+      }
+      .area:nth-child(2n + 1) {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root" trace-name="land_root" trace-id="1">
+      <div class="button" trace-name="submit_play" trace-msg="提交按钮">
+        点击
+      </div>
+      <div class="button" trace-name="comp_play" trace-msg="组件按钮">多次点击</div>
+    </div>
+    <div
+      class="area"
+      trace-name="observer_area"
+      trace-id="1"
+      trace-msg="第一个区域"
+    ></div>
+    <div
+      class="area"
+      trace-name="observer_area"
+      trace-id="2"
+      trace-msg="第二个区域"
+    ></div>
+    <div
+      class="area"
+      trace-name="observer_area"
+      trace-id="3"
+      trace-msg="第三个区域"
+    ></div>
+    <div
+      class="area"
+      trace-name="observer_area"
+      trace-id="4"
+      trace-msg="第四个区域"
+    ></div>
+  </body>
+</html>
