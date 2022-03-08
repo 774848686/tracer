@@ -53,7 +53,7 @@ const trace = {
           eventsPool.push(k);
           document.addEventListener(k, ['click'].includes(k) ? debounce(handleEvent) : handleEvent)
         }
-        // this.domWatchLoad(key, events[key])
+        this.domWatchLoad(key, events[key])
       }
     })
   },
@@ -96,7 +96,7 @@ const trace = {
         let rootElm = document.querySelector(attrname)
         if (rootElm) {
           var t = formatStrToObj(data.DOMNodeInserted)
-          this.traceEmit(rootElm, 'root', t)
+          trace.traceEmit(rootElm, 'root', t)
           return clearTimeout(timer)
         }
         timer = setTimeout(() => {
@@ -116,7 +116,7 @@ const trace = {
       d.ready &&
         document.addEventListener('DOMContentLoaded', function (e) {
           const t = formatStrToObj(d.ready)
-          trace.traceEmit(document, 'ready', t)
+          trace.traceEmit(document, 'ready', t);
         })
 
       d.winLoad &&

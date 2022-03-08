@@ -4,4 +4,6 @@ trace.initDocument()
 // document.body.append(example())
 setTimeout(() => {
   $('body').append('<div trace-name="dialog_root">测试广告</div>')
+  $('#root').append('111')
 }, 100)
+
